@@ -5,11 +5,11 @@ Bitlore provides a simple way to implement flexible validation scenarios in .NET
 Bitlore is a natural fit for complex domain models: 
  combine Rules and Interpretations in Specifications to implement easy to follow and test scenarios. 
 
-Small: 
+* Small: 
  Only three basic concepts!
-Fluff-free: 
+* Fluff-free: 
  Use your programming language and your model to define the rules.
-Extensible: 
+* Extensible: 
  Implement Rule interface to encapsulate complexity, define your own specifications and interpretations.
 
 ## Sample of a spec
@@ -42,7 +42,7 @@ gem install albacore
 gem install semver2
 ```
 
- 4. Run `rake`
+ Run `rake`
  
 ## Target frameworks
 The library is portable and available for
