@@ -39,6 +39,9 @@
     <Compile Include="..\SolutionVersion.cs">
       <Link>Properties\SolutionVersion.cs</Link>
     </Compile>
+    <Compile Include="Binding\Binding.cs" />
+    <Compile Include="Interpretations\CompositeInterpretation.cs" />
+    <Compile Include="Interpretations\NoneInterpretation.cs" />
     <Compile Include="Interpretations\FormattedInterpretation.cs" />
     <Compile Include="Interpretations\Interpretation.cs" />
     <Compile Include="Interpretations\StaticInterpretation.cs" />
@@ -47,6 +50,9 @@
     <Compile Include="Rules\Rule.cs" />
     <Compile Include="Rules\Rules.cs" />
     <Compile Include="Specifications\AllSpecification.cs" />
+    <Compile Include="Rules\AnyRule.cs" />
+    <Compile Include="Specifications\ActionSpecification.cs" />
+    <Compile Include="Binding\Bindings.cs" />
     <Compile Include="Specifications\Specifications.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

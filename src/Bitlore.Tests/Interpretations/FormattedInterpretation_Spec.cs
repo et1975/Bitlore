@@ -9,18 +9,18 @@ namespace Bitlore.Tests
 {
     public class Given_a_FormattedInterpretation
     {
-        Interpretation _formatted = new FormattedInterpretation("value:{0}",1);
+        Interpretation _i = new FormattedInterpretation("value:{0}",1);
 
         [Fact]
         public void Produces_Text()
         {
-            Assert.Equal("value:1",_formatted.AsText());
+            Assert.Equal("value:1",_i.AsText());
         }
 
         [Fact]
         public void Uses_Formatter()
         {
-            Assert.Equal("_value:1_",_formatted.AsText(t => string.Format("_{0}_",t)));
+            Assert.Equal("_value:1_",_i.AsText(t => string.Format("_{0}_",t)));
         }
     }
 }

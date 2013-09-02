@@ -11,5 +11,16 @@ namespace Bitlore
         {
             return new PredicateRule<T>(predicate);
         }
+
+        public static Rule<T> Any(IEnumerable<Rule<T>> rules)
+        {
+            return new AnyRule<T>(rules);
+        }
+
+        public static Rule<T> All<T>(IEnumerable<KeyValuePair<Rule<T>, Func<Rule<T>, Interpretation>>> rulesWithFailureInterpreations)
+        {
+            return new AllSpecification<T>(rulesWithFailureInterpreations);
+        }
+
     }
 }
