@@ -23,8 +23,31 @@ Bitlore is a natural fit for complex domain models:
 
 Defines 2 rules and combines them in the specification that can be used to perform a validation:
 ```
- Assert.True(new[] { "NOT_EVEN" }.SequenceEqual(spec.Test(3).Select(i => i.AsText())));
+ var failures = spec.Test(3); // { "NOT_EVEN" }
 ```
+
+Where it gets really interesting and powerful is with ActionSpecification:
+```
+            Specifications.Action(new List<Binding<int>>
+            {
+                Rules<int>
+                    .Predicate(x => x % 2 == 0)
+                    .Bind(_ => Interpretations.Static("NOT_EVEN"), (_,i)=>_failureInvoked = true,
+                        _ => Interpretations.Static("EVEN"), (_,i)=>_successInvoked = true),
+                Rules<int>
+                    .Predicate(x => x > 0)
+                    .Bind(_ => Interpretations.Static("NOT_POSITIVE"), (_,i)=>_failureInvoked = true,
+                        _ => Interpretations.Static("POSITIVE"), (_,i)=>_successInvoked = true),
+            })
+            .Test(2);
+```
+Actions are invoked and we can see that the varialbes have been set:            
+```
+            Assert.True(_successInvoked);
+            Assert.False(_failureInvoked);
+```
+
+Obviously you'd want to do something more intersting, like manipulating your view, but you get the idea.
 
 See the unit tests for complete details.
 
