@@ -17,7 +17,7 @@ namespace Bitlore
             return new AnyRule<T>(rules);
         }
 
-        public static Rule<T> All<T>(IEnumerable<KeyValuePair<Rule<T>, Func<Rule<T>, Interpretation>>> rulesWithFailureInterpreations)
+        public static Rule<T> All(IEnumerable<KeyValuePair<Rule<T>, Func<Rule<T>, Interpretation>>> rulesWithFailureInterpreations)
         {
             return new AllSpecification<T>(rulesWithFailureInterpreations);
         }
