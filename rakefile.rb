@@ -108,6 +108,7 @@ nuspec :_nuspec do |nuspec|
   nuspec.id = 'Bitlore'
   nuspec.version = NUGET_VERSION
   nuspec.authors = 'Eugene Tolmachev'
+  nuspec.copyright = COPYRIGHT
   nuspec.description = 'Bitlore, minimalist validation library for DDD affectionados'
   nuspec.title = 'Bitlore'
   nuspec.projectUrl = 'http://github.com/et1975/Bitlore'
