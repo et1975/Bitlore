@@ -1,4 +1,4 @@
-# Bitlore
+# Bitlore [![Build status](https://ci.appveyor.com/api/projects/status/nkghau01donnitgu?svg=true)](https://ci.appveyor.com/project/et1975/bitlore)
 
 Bitlore provides a simple way to implement flexible validation scenarios in .NET framework.
 
