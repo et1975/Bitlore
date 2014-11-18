@@ -6,11 +6,10 @@ install:
   - gem install semver2
   - gem install albacore -v 0.3.5
   - gem install rubyzip -v 0.9.9
-  - nuget install xunit
 
 branches:
   only:
     - master
 
 build_script:
-  - rake build
+  - rake all
