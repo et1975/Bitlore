@@ -70,7 +70,7 @@ task :package => [:create_nuget]
 desc "restores missing packages"
 task :nuget_restore do 
   solution = File.join(props[:src],'Bitlore.sln')
-  sh "src/.nuget/nuget.exe restore #{solution}"
+  system 'src/.nuget/nuget.exe', 'restore', solution, clr_command: true
 end
 
 Albacore::Tasks::Versionizer.new :versioning
