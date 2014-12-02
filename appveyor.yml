@@ -2,12 +2,12 @@ os: Windows Server 2012 R2
 version: 0.0.{build}
 
 install:
-  - gem install semver2
-  - gem install albacore
+  - gem install bundler
 
 branches:
   only:
     - master
 
 build_script:
-  - rake all
+  - bundle install
+  - bundle exec rake all
