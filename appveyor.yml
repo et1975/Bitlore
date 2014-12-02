@@ -2,7 +2,6 @@ os: Windows Server 2012 R2
 version: 0.0.{build}
 
 install:
-  - gem install rake
   - gem install semver2
   - gem install albacore
 
